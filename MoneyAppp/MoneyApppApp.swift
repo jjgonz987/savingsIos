@@ -10,11 +10,19 @@ import SwiftUI
 @main
 struct MoneyApppApp: App {
     let persistenceController = PersistenceController.shared
+    
+    @StateObject var auth = Auth()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if auth.isValidated {
+                ContentView()
+                    .environmentObject(auth)
+            }
+            else {
+                LoginView()
+                    .environmentObject(auth)
+            }
         }
     }
 }

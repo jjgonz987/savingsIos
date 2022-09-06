@@ -16,6 +16,12 @@
 		42B6F61428C7041E002EC631 /* MoneyApppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F61328C7041E002EC631 /* MoneyApppTests.swift */; };
 		42B6F61E28C7041E002EC631 /* MoneyApppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F61D28C7041E002EC631 /* MoneyApppUITests.swift */; };
 		42B6F62028C7041E002EC631 /* MoneyApppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F61F28C7041E002EC631 /* MoneyApppUITestsLaunchTests.swift */; };
+		42B6F62F28C70868002EC631 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F62E28C70868002EC631 /* Credentials.swift */; };
+		42B6F63228C708E1002EC631 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F63128C708E1002EC631 /* ApiService.swift */; };
+		42B6F63428C70A27002EC631 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F63328C70A27002EC631 /* UIApplication+Extension.swift */; };
+		42B6F63828C70C81002EC631 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F63728C70C81002EC631 /* LoginViewModel.swift */; };
+		42B6F63A28C70CA4002EC631 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F63928C70CA4002EC631 /* LoginView.swift */; };
+		42B6F63C28C70EDA002EC631 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6F63B28C70EDA002EC631 /* Auth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		42B6F61928C7041E002EC631 /* MoneyApppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyApppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B6F61D28C7041E002EC631 /* MoneyApppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyApppUITests.swift; sourceTree = "<group>"; };
 		42B6F61F28C7041E002EC631 /* MoneyApppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyApppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		42B6F62E28C70868002EC631 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		42B6F63128C708E1002EC631 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		42B6F63328C70A27002EC631 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		42B6F63728C70C81002EC631 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		42B6F63928C70CA4002EC631 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		42B6F63B28C70EDA002EC631 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +110,15 @@
 		42B6F5FC28C7041D002EC631 /* MoneyAppp */ = {
 			isa = PBXGroup;
 			children = (
+				42B6F63028C708B5002EC631 /* Services */,
+				42B6F62D28C70843002EC631 /* Models */,
+				42B6F62C28C70815002EC631 /* Views */,
 				42B6F5FD28C7041D002EC631 /* MoneyApppApp.swift */,
-				42B6F5FF28C7041D002EC631 /* ContentView.swift */,
 				42B6F60128C7041E002EC631 /* Assets.xcassets */,
 				42B6F60628C7041E002EC631 /* Persistence.swift */,
 				42B6F60828C7041E002EC631 /* MoneyAppp.xcdatamodeld */,
 				42B6F60328C7041E002EC631 /* Preview Content */,
+				42B6F63B28C70EDA002EC631 /* Auth.swift */,
 			);
 			path = MoneyAppp;
 			sourceTree = "<group>";
@@ -131,6 +146,33 @@
 				42B6F61F28C7041E002EC631 /* MoneyApppUITestsLaunchTests.swift */,
 			);
 			path = MoneyApppUITests;
+			sourceTree = "<group>";
+		};
+		42B6F62C28C70815002EC631 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42B6F5FF28C7041D002EC631 /* ContentView.swift */,
+				42B6F63728C70C81002EC631 /* LoginViewModel.swift */,
+				42B6F63928C70CA4002EC631 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42B6F62D28C70843002EC631 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42B6F62E28C70868002EC631 /* Credentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42B6F63028C708B5002EC631 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				42B6F63128C708E1002EC631 /* ApiService.swift */,
+				42B6F63328C70A27002EC631 /* UIApplication+Extension.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +307,14 @@
 			files = (
 				42B6F60728C7041E002EC631 /* Persistence.swift in Sources */,
 				42B6F60028C7041D002EC631 /* ContentView.swift in Sources */,
+				42B6F63228C708E1002EC631 /* ApiService.swift in Sources */,
+				42B6F63A28C70CA4002EC631 /* LoginView.swift in Sources */,
+				42B6F62F28C70868002EC631 /* Credentials.swift in Sources */,
+				42B6F63C28C70EDA002EC631 /* Auth.swift in Sources */,
 				42B6F5FE28C7041D002EC631 /* MoneyApppApp.swift in Sources */,
 				42B6F60A28C7041E002EC631 /* MoneyAppp.xcdatamodeld in Sources */,
+				42B6F63428C70A27002EC631 /* UIApplication+Extension.swift in Sources */,
+				42B6F63828C70C81002EC631 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
