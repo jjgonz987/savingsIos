@@ -12,6 +12,17 @@ struct ContentView: View {
     
     @EnvironmentObject var auth: Auth
     
+    struct HomeView: View {
+        var body: some View{
+            NavigationStack {
+                ZStack {
+                    Color.red
+                }
+                .navigationTitle("Home")
+            }
+        }
+    }
+    
     
     var body: some View {
         
@@ -29,7 +40,20 @@ struct ContentView: View {
                     }
                 }
             }
+            TabView{
+                HomeView()
+                    .tabItem{
+                        Text("Home")
+                        Image(systemName: "house")
+                    }
+                Text("Budget")
+                    .tabItem{
+                        Text("Budget")
+                        Image(systemName: "plus.app.fill")
+                    }
+            }
         }
+       
         
     }
 }
